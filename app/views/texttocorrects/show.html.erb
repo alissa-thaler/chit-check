@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Language:</strong>
+  <%= @texttocorrect.language %>
+</p>
+
+<p>
+  <strong>Due date:</strong>
+  <%= @texttocorrect.duedate %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @texttocorrect.description %>
+</p>
+
+<%= link_to 'Edit', edit_texttocorrect_path(@texttocorrect) %> |
+<%= link_to 'Back', texttocorrects_path %>

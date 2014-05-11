@@ -1,0 +1,34 @@
+<h1>Texts to correct</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Status</th>
+      <th>User</th>
+      <th>Language</th>
+      <th>Description</th>
+       <th>Due date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @texttocorrects.each do |texttocorrect| %>
+      <tr>
+        <td></td>
+        <td></td>
+        <td><%= texttocorrect.language %></td>
+        
+        <td><%= texttocorrect.description %></td>
+        <td><%= texttocorrect.duedate %></td>
+        <td><%= link_to 'Show', texttocorrect %></td>
+        <td><%= link_to 'Edit', edit_texttocorrect_path(texttocorrect) %></td>
+        <td><%= link_to 'Destroy', texttocorrect, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Text', new_texttocorrect_path %>

@@ -1,0 +1,46 @@
+<%= form_for(@texttocorrect) do |f| %>
+  <% if @texttocorrect.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@texttocorrect.errors.count, "error") %> prohibited this texttocorrect from being saved:</h2>
+
+      <ul>
+      <% @texttocorrect.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :language %><br>
+    <%= f.text_field :language %>
+  </div>
+
+  <div class="field">
+    <p> Due date </p>
+    <%= f.text_field :duedate %>
+  </div>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="field">
+    <%= f.label :description %><br>
+    <%= f.text_field :description %>
+  </div>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <br/>
+  <div class="actions">
+    <button value = "Submit" > Submit to correct your text </button>
+  </div>
+<% end %>
